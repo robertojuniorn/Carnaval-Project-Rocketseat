@@ -14,6 +14,18 @@
     font-size: 62.5%;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 body {
     font-size: 1.6rem;
 }
@@ -21,7 +33,6 @@ body {
 header {
     min-height: 53.2rem;
     background-color: #f8f8ff;
-    text-align: center;
     position: relative;
     overflow: hidden;
     display: grid;
@@ -52,7 +63,6 @@ header::after {
 
 header .content {
     width: fit-content;
-    border: 1px solid red;
     position: relative;
     z-index: 1;
 }
@@ -63,6 +73,7 @@ header .content {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #E45858;
+    text-align: center;
  }
 
  header h1 {
@@ -70,13 +81,20 @@ header .content {
     line-height: 125%;
     color: #121214;
     max-width: 64.7rem;
+    margin: auto;
+    margin: 1.8rem auto 0;
  }
 
  header span {
     color: #6246ea;
  }
 
+ header .top.content {
+    text-align: center;
+ }
+
  form {
+    margin-top: 4rem;
     display: flex;
     padding: 4rem;
     gap: 2.4rem;
@@ -84,3 +102,61 @@ header .content {
     border: 1px solid #eaeaea;
     border-radius: 1rem;
  }
+
+ input,
+ select,
+ button {
+    font-family: Roboto;    
+    all: unset;
+ }
+
+ .search-field{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem ;
+    background: #f4f4ff;
+    padding: 1.2rem 0.8rem 1.2rem 1.4rem;
+    border-radius: 0.5rem;
+ }
+
+input,select {
+    color: #7c7c8a;
+}
+
+ .search-field i {
+    color: #e45858;
+    font-size: 2.4rem;
+ }
+
+form button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+    gap: 0.8rem;
+    background: #6246EA;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+button:hover {
+    background: #523dbe;
+}
+
+select, .select {
+    position: relative;
+}
+
+select {
+    z-index: 1;
+}
+
+.ph-caret-down{
+    position: absolute;
+    right: 1rem;
+    z-index: 0;
+}
